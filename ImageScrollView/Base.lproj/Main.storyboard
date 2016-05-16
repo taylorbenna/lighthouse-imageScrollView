@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aBV-8h-398">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -50,5 +50,50 @@
             </objects>
             <point key="canvasLocation" x="305" y="372"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Jjv-LN-tSK">
+            <objects>
+                <viewController id="aBV-8h-398" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u3n-R5-zAZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="PzW-4h-kj6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1fv-SE-DGs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bf7-9Y-2C5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Lighthouse-zoomed" translatesAutoresizingMaskIntoConstraints="NO" id="RvX-YK-A1H"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RvX-YK-A1H" secondAttribute="bottom" id="1bO-by-RJE"/>
+                                    <constraint firstItem="RvX-YK-A1H" firstAttribute="leading" secondItem="Bf7-9Y-2C5" secondAttribute="leading" id="CIs-ah-Upc"/>
+                                    <constraint firstItem="RvX-YK-A1H" firstAttribute="top" secondItem="Bf7-9Y-2C5" secondAttribute="top" id="HVL-ip-2fu"/>
+                                    <constraint firstAttribute="trailing" secondItem="RvX-YK-A1H" secondAttribute="trailing" id="tF5-5u-5BZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PzW-4h-kj6" firstAttribute="top" secondItem="Bf7-9Y-2C5" secondAttribute="bottom" id="4gr-en-SSn"/>
+                            <constraint firstItem="Bf7-9Y-2C5" firstAttribute="top" secondItem="1fv-SE-DGs" secondAttribute="top" id="6Q9-oh-is3"/>
+                            <constraint firstItem="Bf7-9Y-2C5" firstAttribute="leading" secondItem="1fv-SE-DGs" secondAttribute="leading" id="GVc-KR-fGA"/>
+                            <constraint firstAttribute="trailing" secondItem="Bf7-9Y-2C5" secondAttribute="trailing" id="hwJ-UG-IbK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="RvX-YK-A1H" id="yRh-Sv-aLL"/>
+                        <outlet property="scrollView" destination="Bf7-9Y-2C5" id="YIq-MZ-0HQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJC-yf-dCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1029"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Lighthouse-zoomed" width="450" height="900"/>
+    </resources>
 </document>
